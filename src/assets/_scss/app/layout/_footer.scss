@@ -1,0 +1,65 @@
+/*
+    FOOTER.CSS
+
+    - Last updated: 00.00.00
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// FOOTER
+//-----------------------------------------------------------------
+
+.global-footer {
+	background: #1f3569; //$brand-primary;
+	color: white;
+
+	.stamps {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
+
+	a {
+		color: white;
+	}
+}
+
+//-----------------------------------------------------------------
+// FOOTER TOP
+//-----------------------------------------------------------------
+
+.global-footer-top {
+	padding: rem-calc(70 0 40 0);
+
+	.offices a {
+		font-size: rem-calc(23);
+	}
+}
+
+//-----------------------------------------------------------------
+// FOOTER BOTTOM
+//-----------------------------------------------------------------
+
+.global-footer-bottom {
+	padding: rem-calc(15 0);
+	border-top: 1px solid rgba(white, 0.1);
+	font-size: rem-calc(14);
+	color: rgba(white, 0.2);
+
+	.author-logo {
+		img {
+			opacity: 0.5;
+		}
+
+		.text {
+			text-transform: uppercase;
+			color: rgba(white, 0.3);
+		}
+	}
+}
+
+//=========================================
+//
+//=========================================

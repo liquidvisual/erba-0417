@@ -1,0 +1,73 @@
+- title: Home
+  url: /
+
+- title: About
+  url: /about/
+  include_children_in_nav: true
+  children:
+    - title: Our People
+      url: /about/our-people/
+      include_children_in_nav: true
+      children:
+        - title: John Smith
+          url: /about/our-people/our-people-item/
+
+    - title: Company Information
+      url: /about/company-information/
+
+    - title: What Sets Erbas Apart
+      url: /about/what-sets-erbas-apart/
+
+    - title: News
+      url: /about/news/
+      include_children_in_nav: true
+      children:
+        - title: News Item
+          url: /about/news/news-item/
+
+- title: Capabilities & Services
+  url: /capabilities-and-services/
+  include_children_in_nav: true
+  children:
+    - title: Mechanical
+      url: /capabilities-and-services/mechanical/
+    - title: Electrical
+      url: /capabilities-and-services/electrical/
+    - title: BIM
+      url: /capabilities-and-services/bim/
+    - title: ESD
+      url: /capabilities-and-services/esd/
+    - title: Hydraulics
+      url: /capabilities-and-services/hydraulics/
+    - title: Transportation
+      url: /capabilities-and-services/transportation/
+    - title: Fire & Life Safety
+      url: /capabilities-and-services/fire-and-life-safety/
+
+- title: Projects
+  url: /projects/
+  include_children_in_nav: true
+  children:
+    - title: Building
+      url: /projects/building/
+      include_children_in_nav: true
+      children:
+        - title: Building Item
+          url: /projects/building/building-item/
+
+    - title: Education
+      url: /projects/education/
+    - title: Government
+      url: /projects/government/
+    - title: Health
+      url: /projects/health/
+    - title: Industrial
+      url: /projects/industrial/
+    - title: Infastructure
+      url: /projects/infastructure/
+
+- title: Sustainability
+  url: /sustainability/
+
+- title: Contact
+  url: /contact/

@@ -1,0 +1,144 @@
+/*
+    HEADER.CSS
+
+    - Last updated: 25.02.17
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+$header-sm-height: 60px !default; // optimal
+$header-md-height: 110px !default;
+$header-lg-height: 280px !default;
+
+//-----------------------------------------------------------------
+// HEADROOM
+//-----------------------------------------------------------------
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear, background-color 200ms ease;
+}
+
+.headroom--pinned {
+    @include media-breakpoint-down(sm) {
+        transform: translateY(0%);
+    }
+}
+.headroom--unpinned {
+	@include media-breakpoint-down(sm) {
+    	transform: translateY(-100%);
+	}
+}
+
+//**********************************************
+// STYLING SCROLL HEADER
+//**********************************************
+
+.headroom--top {
+	background: none; // Need for animation
+}
+
+.headroom--not-top.global-header {
+	@include media-breakpoint-up(md) {
+	    background: rgba(white, 0.8);
+	    box-shadow: 0 0 3px 1px rgba(black, 0.2);
+
+	    -webkit-backdrop-filter: blur(8px);
+	    backdrop-filter: blur(8px);
+
+	    > .container,
+	    > .container-fluid {
+	    	height: $header-md-height;
+	    }
+
+	    .lv-topbar {
+	        margin: auto -15px auto auto;
+	    }
+
+	    .logo {
+	    	margin: auto 0; // align vertical
+
+	    	img {
+	    		width: 150px;
+	    	}
+	    }
+	}
+}
+
+//-----------------------------------------------------------------
+// HEADER
+//-----------------------------------------------------------------
+
+.global-header {
+	position: fixed; // covers more use cases
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	background: rgba(white, 0.64);
+
+	@include media-breakpoint-down(sm) {
+		// position: fixed;
+	    background: white;
+	    box-shadow: 0 0 3px 1px rgba(black, 0.2);
+	}
+	//=========================================
+	// HEADER HEIGHT [LOCKED]
+	//=========================================
+
+	> .container,
+	> .container-fluid {
+		display: flex;
+		height: $header-sm-height;
+		transition: height 100ms ease;
+		align-items: center;
+
+		@include media-breakpoint-up(md) {
+		    height: $header-md-height;
+		}
+
+		@include media-breakpoint-up(xl) {
+			height: $header-lg-height;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// LOGO
+//-----------------------------------------------------------------
+
+.global-header .logo {
+	@include media-breakpoint-up(md) {
+	    // margin: 30px 0 0 0;
+	}
+
+	img {
+		width: 75px;
+		transition: all 300ms ease;
+
+		@include media-breakpoint-up(md) {
+			width: 150px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			width: 200px;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// HAMBURGER
+//-----------------------------------------------------------------
+
+.global-header-hamburger {
+	margin: auto 0 auto auto;
+
+	@include media-breakpoint-up(md) {
+	    margin: 30px 0 auto auto;
+	}
+}
+
+//=========================================
+//
+//=========================================

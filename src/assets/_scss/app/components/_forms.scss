@@ -1,0 +1,96 @@
+/*
+    FORMS.CSS
+
+    - Last updated: 06.10.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// FORMS
+//-----------------------------------------------------------------
+
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+input[type="password"],
+textarea {
+	-webkit-appearance: none; // removes shadow on iOS
+	font-family: $font-family-sans-serif;
+}
+
+//-----------------------------------------------------------------
+// FORM NEWSLETTER
+//-----------------------------------------------------------------
+
+.form-newsletter {
+	max-width: rem-calc(516);
+	padding: rem-calc(20);
+	margin-bottom: rem-calc(45);
+	background: rgba(white, 0.1);
+
+	input {
+		background: rgba(white, 0.2);
+		border: 0;
+	}
+
+	button {
+		background: $brand-secondary;
+		border: 0;
+		color: white;
+		border-radius: 0;
+		font-size: rem-calc(20);
+		line-height: 0;
+		padding: rem-calc(0 15);
+	}
+
+	.fa-comment {
+		font-size: rem-calc(25);
+		line-height: 0;
+	}
+}
+
+
+.form-newsletter ::-webkit-input-placeholder {
+  color: white !important;
+}
+
+.form-newsletter ::-moz-placeholder {
+  color: white !important;
+}
+.form-newsletter :-ms-input-placeholder {
+  color: white !important;
+}
+.form-newsletter :-moz-placeholder {
+  color: white !important;
+}
+
+//-----------------------------------------------------------------
+// BOOTSTRAP VALIDATION
+// http://1000hz.github.io/bootstrap-validator/#validator-events
+//-----------------------------------------------------------------
+
+form[data-toggle="validator"] .error {
+	display: none;
+	width: 100%;
+	padding: rem-calc(5 10);
+	background: $brand-danger;
+	color: white;
+}
+
+form[data-toggle="validator"] .has-error > .form-control {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+form[data-toggle="validator"] .has-error > .error {
+	display: block;
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

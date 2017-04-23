@@ -1,0 +1,112 @@
+/*
+    BUTTONS.CSS
+
+    - Last updated: 23.04.17
+    - liquidvisual.com
+*/
+//--------------------------------------------------------------------
+// VARIABLES
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+// BUTTON PRIMARY
+//--------------------------------------------------------------------
+
+.btn-primary {
+	min-width: 124px;
+	padding: rem-calc(8 15);
+	font-size: rem-calc(12);
+	text-transform: uppercase;
+	text-align: left;
+}
+
+//--------------------------------------------------------------------
+// BUTTON OUTLINE
+//--------------------------------------------------------------------
+
+.btn-outline-secondary {
+	display: inline-flex;
+	align-items: center;
+	min-width: rem-calc(154);
+	border-width: 2px;
+	border-color: white;
+	color: white;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: rem-calc(14);
+
+	.fa-angle-right {
+		margin-left: auto;
+		font-size: rem-calc(25);
+		line-height: 0;
+	}
+
+	&:hover {
+		background: white;
+		color: $brand-primary;
+		border-color: white;
+	}
+}
+
+//--------------------------------------------------------------------
+// BUTTON TILE (Used to show projects on homepage etc)
+//--------------------------------------------------------------------
+
+.btn-tile {
+	display: block;
+	position: relative;
+	overflow: hidden;
+
+	.btn-tile-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: none;
+		transition: transform 300ms ease;
+	}
+
+	.btn-tile-overlay {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: rem-calc(30);
+		background: rgba(black, 0.3);
+		transition: opacity 300ms ease;
+
+		@include media-breakpoint-up(xl) {
+		    opacity: 0;
+		    background: rgba(black, 0.5);
+		}
+
+		.btn-tile-header {
+			color: white;
+		}
+	}
+
+	&:hover {
+		@include media-breakpoint-up(xl) {
+		    .btn-tile-bg {
+		    	transform: scale(1.05);
+		    }
+		    .btn-tile-overlay {
+		    	opacity: 1;
+		    }
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

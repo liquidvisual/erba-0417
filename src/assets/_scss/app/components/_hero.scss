@@ -1,0 +1,118 @@
+/*
+    HERO.CSS
+
+    - Updated: 26.03.17
+    - Notes:
+        * liquidvisual recommends bxSlider for hero carousels
+        * fixed overflow problem when removing JS
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+$hero-sm-height:            auto; // IMPORTANT: if carousel slides, you need a fixed height
+$hero-md-height:            rem-calc(434);
+$hero-lg-height:            rem-calc(434);
+$hero-xl-height:            rem-calc(834); //
+$hero-xxl-height:           rem-calc(834);
+
+$hero-sm-height-preset-1:   rem-calc(290); // Appears on product landing
+$hero-md-height-preset-1:   rem-calc(434);
+$hero-lg-height-preset-1:   rem-calc(434);
+
+//-----------------------------------------------------------------
+// HERO WRAPPER
+//
+// Used to align the controls relative to the container
+//-----------------------------------------------------------------
+
+.lv-hero-wrapper {
+    position: relative;
+
+    .panel-header {
+        margin-top: rem-calc(-300);
+    }
+}
+
+//-----------------------------------------------------------------
+// HERO
+//
+// By design, mobile defaults to 'auto'
+//-----------------------------------------------------------------
+
+.lv-hero {
+    // width: 100%; // added last minute - breaking?
+    // overflow: hidden; // causes problems without JS
+    height: $hero-sm-height;
+
+
+
+    @include media-breakpoint-up(md) {
+        height: $hero-md-height;
+    }
+
+    @include media-breakpoint-up(lg) {
+       height: $hero-lg-height;
+    }
+
+    @include media-breakpoint-up(xl) {
+       height: $hero-xl-height;
+    }
+
+    //=========================================
+    // HAS HEIGHT PRESET 1
+    //=========================================
+
+    &.has-height-preset-1 {
+        height: $hero-sm-height-preset-1;
+
+        @include media-breakpoint-up(md) { // added - refactor
+           height: $hero-md-height-preset-1;
+        }
+
+        @include media-breakpoint-up(lg) {
+           height: $hero-lg-height-preset-1;
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// HERO ITEM (Slides)
+//-----------------------------------------------------------------
+
+.lv-hero-item {
+    display: flex;
+    float: left;
+    width: 100%; // need
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    > .container {
+        margin: auto auto 0 auto;
+    }
+}
+
+//-----------------------------------------------------------------
+// HERO CAPTION
+//-----------------------------------------------------------------
+
+// .lv-hero-item-caption {
+//     // position: relative;
+//     // top: rem-calc(50);
+//     padding: rem-calc(164 60 30 60);
+//     background: rgba($brand-secondary, 0.93) url(/assets/img/content/logo-mark.svg) no-repeat -60px -60px;
+//     color: white;
+//     font-size: rem-calc(19);
+
+
+
+//     h1 {
+//         font-weight: 300;
+//     }
+// }
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------

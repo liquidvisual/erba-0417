@@ -1,0 +1,36 @@
+{% comment %}
+    LIQUIDVISUAL-HERO
+
+    - Updated: 23.04.17
+    - Notes:
+        * Multiple items in carousel_slides.yml triggers carousel mode
+        * .has-height-preset-1 - used for internal pages to set a height
+{% endcomment %}
+
+{% assign hero = page.hero | default: '/assets/img/content/hero-1.jpg' %}
+
+<div class="lv-hero-wrapper">
+
+    <!-- HERO -->
+    <div class="lv-hero">
+
+        <!-- HERO ITEM -->
+        <div class="lv-hero-item" style="background-image: url('{{ hero }}')">
+
+        </div>
+
+    </div> <!-- /.lv-hero -->
+
+    <!-- PANEL HEADER -->
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-md-7">
+                <div class="panel-feature">
+                    <h1>Engineers for Building Services</h1>
+                    <p>erbas™ is a multi-disciplinary consulting engineering firm serving clients in Commercial, Health, Education, Government, Industrial and Sustainability sectors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- /.lv-hero-wrapper -->

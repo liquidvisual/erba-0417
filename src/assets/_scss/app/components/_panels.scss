@@ -1,0 +1,59 @@
+/*
+    PANELS.CSS
+
+    - Last updated: 23.04.17
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//--------------------------------------------------------------------
+//
+//--------------------------------------------------------------------
+
+.panel-feature {
+	padding: rem-calc(60);
+    background: rgba($brand-secondary, 0.93) url(/assets/img/content/logo-mark.svg) no-repeat -60px -60px;
+    color: white;
+    font-size: rem-calc(16);
+
+    &.text-right {
+    	background-position: -90px 100px;
+    }
+
+    > h1,
+    > h2,
+    > h3, {
+    	font-size: rem-calc(40); // special case
+        font-weight: 300;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+    	color: white;
+    }
+}
+
+//-----------------------------------------------------------------
+// CONTEXTS
+//-----------------------------------------------------------------
+
+.lv-hero-wrapper .panel-feature {
+	padding: rem-calc(164 60 30 60);
+	font-size: rem-calc(19);
+	// margin-top: -286px;
+	// margin-bottom: 0;
+	position: absolute;
+	bottom: -50px;
+}
+
+.section .panel-feature {
+	position: relative;
+	top: 50px;
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

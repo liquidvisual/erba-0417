@@ -1,0 +1,41 @@
+# GLOBAL SITE SETTINGS
+
+cname: erbas.yourwebvisual.com
+
+# META
+title: Erbas
+title_homepage: Erbas - Engineers for Building Services
+company: Erbas
+description: Engineers for Building Services
+
+# DEVELOPER
+allow_robots: false
+github_repo_owner: liquidvisual
+github_repo_path: https://github.com/liquidvisual/erba-0417
+github_repo_name: erba-0417
+jekyll_version: 3.0.3
+
+# OFFICES
+offices:
+  - title: Sydney
+    address:
+  - title: Melbourne
+    address:
+  - title: Manilla
+    address:
+
+# SOCIAL MEDIA
+facebook:
+linked_in:
+google_plus:
+instagram:
+
+# GOOGLE
+google_analytics: "UA-XXXXXXXX-X"
+
+# AUTHOR
+author:
+  title: Much Media
+  url: http://muchmedia.com.au
+  logo: /assets/img/ui/much-media-logo.svg
+  description: Website by Much Media

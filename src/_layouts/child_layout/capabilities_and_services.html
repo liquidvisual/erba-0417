@@ -1,0 +1,34 @@
+---
+layout: base__page
+---
+
+{% assign parent_links = site.data.sitemap[page.parent_index].children %}
+
+<div class="container">
+
+	<!-- LEAD PARAGRAPH -->
+	<div class="row justify-content-center text-center">
+		<div class="col-md-8">
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit</p>
+		</div>
+	</div>
+
+	<!-- GRID CHILDREN -->
+	<ul class="block-grid-xs-1 block-grid-md-3">
+	    {% for item in parent_links %}
+	        <li>
+	            <a class="btn-tile" href="{{ item.url }}">
+	                <img width="100%" src="/assets/img/content/projects/project-{{forloop.index}}.jpg" alt="{{ item.title }}">
+	                <span class="btn-tile-bg" style="background-image: url(/assets/img/content/projects/project-{{forloop.index}}.jpg)"></span>
+	                <div class="btn-tile-overlay">
+	                    <h3 class="btn-tile-header">{{ item.title }}</h3>
+	                </div>
+	            </a>
+	        </li>
+	    {% endfor %}
+	</ul>
+
+</div>

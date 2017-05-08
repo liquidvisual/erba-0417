@@ -1,43 +1,41 @@
 /*
-    SECTIONS.CSS
+    LISTS.CSS
 
-    - Last updated: 23.04.17
+    - Last updated: 05.05.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
-// VARIABLES
+// LISTS
 //-----------------------------------------------------------------
 //--------------------------------------------------------------------
 //
 //--------------------------------------------------------------------
 
-.section {
-	padding: rem-calc(70 0);
-	background-position: center center;
-	background-size: cover;
+//=========================================
+// USED ON MASONRY SPECIALS (Homepage)
+//=========================================
 
-	&.is-light {
-		background: #f3f3f3;
-	}
+.block-grid-condensed {
+    margin: -10px;
 
-	&.has-panel-feature {
-		padding: 0;
-
-		@include media-breakpoint-up(md) {
-		    margin-bottom: 50px;
-		}
-
-		@include media-breakpoint-up(lg) {
-		    margin-bottom: 70px;
-		}
-	}
+    li {
+        padding: 10px;
+    }
 }
 
-//-----------------------------------------------------------------
-//
-//-----------------------------------------------------------------
+//=========================================
+// HACKY
+//=========================================
 
+.block-grid-xs-1 {
+	@include media-breakpoint-down(md) {
+	    margin: -10px;
 
+	    li {
+	        padding: 10px;
+	    }
+	}
+}
 
 //-----------------------------------------------------------------
 //

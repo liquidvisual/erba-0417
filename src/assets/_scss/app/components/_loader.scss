@@ -27,6 +27,10 @@
     }
 }
 
+html.has-loaded .lv-page-loader {
+    animation: page-loader-fadeout 1s ease 0.1s alternate 1 forwards;
+}
+
 //-----------------------------------------------------------------
 // DEV LOADER TURNED OFF FOR SPEED
 //-----------------------------------------------------------------

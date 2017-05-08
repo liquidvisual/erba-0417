@@ -1,0 +1,42 @@
+---
+layout: base__page
+---
+
+{% assign news = site.data.lorem_ipsum %}
+
+<!-- LATEST NEWS -->
+<section class="section text-center">
+	<div class="container">
+
+		<h2>Latest News</h2>
+
+		<ul class="block-grid-xs-1 block-grid-md-2 block-grid-lg-4 block-grid-xl-4 mb-5">
+			{% for item in news | limit: 8 %}
+				<li>
+					<a href="{{ item.url }}">
+						<div class="card">
+							<div class="card-img-top">
+								<img src="http://lorempixel.com/400/300?{{forloop.index}}" alt="...">
+								<span class="card-bg" style="background-image: url(http://lorempixel.com/400/300?{{forloop.index}});"></span>
+							</div>
+							<div class="card-block text-left">
+								<h4 class="card-title">{{ item.title }}</h4>
+								<date>{{ item.date }}</date>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<span href="#" class="btn btn-primary">Read more <i class="fa fa-angle-right"></i></span>
+							</div>
+						</div>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+
+		<div class="divider mb-4"></div>
+
+		<p>
+			<a class="btn-linkX float-left" href="#"><i class="fa fa-angle-left"></i> PREV</a>
+			<a class="btn-linkX float-right" href="#">NEXT <i class="fa fa-angle-right"></i></a>
+		</p>
+
+	</div>
+</section>

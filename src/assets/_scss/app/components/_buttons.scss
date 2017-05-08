@@ -56,6 +56,10 @@
 	position: relative;
 	overflow: hidden;
 
+	@include media-breakpoint-down(sm) {
+	    height: 100px;
+	}
+
 	.btn-tile-bg {
 		position: absolute;
 		top: 0;
@@ -80,11 +84,11 @@
 		height: 100%;
 		padding: rem-calc(30);
 		background: rgba(black, 0.3);
-		transition: opacity 300ms ease;
+		transition: opacity 300ms ease, background-color 300ms ease;
 
 		@include media-breakpoint-up(xl) {
-		    opacity: 0;
-		    background: rgba(black, 0.5);
+		    // opacity: 0;
+		    // background: rgba(black, 0.5);
 		}
 
 		.btn-tile-header {
@@ -98,7 +102,8 @@
 		    	transform: scale(1.05);
 		    }
 		    .btn-tile-overlay {
-		    	opacity: 1;
+		    	// opacity: 1;
+		    	background: rgba(black, 0.1);
 		    }
 		}
 	}

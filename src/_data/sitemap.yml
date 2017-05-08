@@ -9,14 +9,14 @@
       url: /about/our-people/
       include_children_in_nav: true
       children:
-        - title: John Smith
-          url: /about/our-people/our-people-item/
+        - title: Ken Gurcan Erbas
+          url: /about/our-people/ken-gurcan-erbas/
 
     - title: Company Information
       url: /about/company-information/
 
     - title: What Sets Erbas Apart
-      url: /about/what-sets-erbas-apart/
+      url: /about/company-information/
 
     - title: News
       url: /about/news/
@@ -30,17 +30,17 @@
   include_children_in_nav: true
   children:
     - title: Mechanical
-      url: /capabilities-and-services/mechanical/
+      url: /capabilities-and-services/electrical/
     - title: Electrical
       url: /capabilities-and-services/electrical/
-    - title: BIM
-      url: /capabilities-and-services/bim/
+    - title: Building Information Modelling
+      url: /capabilities-and-services/building-information-modelling/
     - title: ESD
-      url: /capabilities-and-services/esd/
+      url: /capabilities-and-services/electrical/
     - title: Hydraulics
-      url: /capabilities-and-services/hydraulics/
+      url: /capabilities-and-services/electrical/
     - title: Transportation
-      url: /capabilities-and-services/transportation/
+      url: /capabilities-and-services/electrical/
     - title: Fire & Life Safety
       url: /capabilities-and-services/fire-and-life-safety/
 
@@ -49,22 +49,21 @@
   include_children_in_nav: true
   children:
     - title: Building
-      url: /projects/building/
-      include_children_in_nav: true
-      children:
-        - title: Building Item
-          url: /projects/building/building-item/
-
+      url: /projects/education/
     - title: Education
       url: /projects/education/
+      include_children_in_nav: true
+      children:
+        - title: UNSW Student Housing
+          url: /projects/education/unsw-student-housing/
     - title: Government
-      url: /projects/government/
+      url: /projects/education/
     - title: Health
-      url: /projects/health/
+      url: /projects/education/
     - title: Industrial
-      url: /projects/industrial/
+      url: /projects/education/
     - title: Infastructure
-      url: /projects/infastructure/
+      url: /projects/education/
 
 - title: Sustainability
   url: /sustainability/

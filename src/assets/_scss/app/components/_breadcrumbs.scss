@@ -1,43 +1,37 @@
 /*
-    SECTIONS.CSS
+    BREADCRUMBS.CSS
 
-    - Last updated: 23.04.17
+    - Last updated: 05.05.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
 // VARIABLES
 //-----------------------------------------------------------------
 //--------------------------------------------------------------------
-//
+// BREADCRUMB OVERRIDE
 //--------------------------------------------------------------------
 
-.section {
-	padding: rem-calc(70 0);
-	background-position: center center;
-	background-size: cover;
+.breadcrumb {
+	margin-bottom: 0; // reset
+	font-size: rem-calc(13);
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #c9ccd4;
 
-	&.is-light {
-		background: #f3f3f3;
-	}
-
-	&.has-panel-feature {
-		padding: 0;
-
-		@include media-breakpoint-up(md) {
-		    margin-bottom: 50px;
-		}
-
-		@include media-breakpoint-up(lg) {
-		    margin-bottom: 70px;
-		}
+	a {
+		color: #9299ab;
 	}
 }
 
 //-----------------------------------------------------------------
-//
+// DIVIDER OVERRIDE
 //-----------------------------------------------------------------
 
-
+.breadcrumb-item + .breadcrumb-item::before {
+	content: "\f105";
+	font-family: 'FontAwesome';
+	color: #9299ab;
+}
 
 //-----------------------------------------------------------------
 //

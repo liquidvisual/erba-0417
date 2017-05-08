@@ -10,13 +10,13 @@
 // VARIABLES
 //-----------------------------------------------------------------
 
-$hero-sm-height:            auto; // IMPORTANT: if carousel slides, you need a fixed height
-$hero-md-height:            rem-calc(434);
-$hero-lg-height:            rem-calc(434);
+$hero-sm-height:            rem-calc(280); // IMPORTANT: if carousel slides, you need a fixed height
+$hero-md-height:            rem-calc(500);
+$hero-lg-height:            rem-calc(600);
 $hero-xl-height:            rem-calc(834); //
 $hero-xxl-height:           rem-calc(834);
 
-$hero-sm-height-preset-1:   rem-calc(290); // Appears on product landing
+$hero-sm-height-preset-1:   rem-calc(200); // Appears on product landing
 $hero-md-height-preset-1:   rem-calc(434);
 $hero-lg-height-preset-1:   rem-calc(434);
 

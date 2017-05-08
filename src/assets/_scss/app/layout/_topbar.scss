@@ -27,7 +27,7 @@
     list-style: none; // reset
     font-family: $font-family-sans-serif;
     font-size: rem-calc(16);
-    font-weight: 600;
+    font-weight: 500;
     // text-transform: uppercase;
 }
 
@@ -68,8 +68,8 @@
     transition: background-color 200ms ease;
 
     &:hover {
-        background-color: rgba(black, 0.3);
-        color: white;
+        background-color: rgba(black, 0.1);
+        // color: white;
     }
 
     // Optional
@@ -92,8 +92,8 @@
 //-----------------------------------------------------------------
 
 .lv-topbar .has-dropdown:hover > .top-parent-anchor {
-    background: rgba(black, 0.3);
-    color: white;
+    background: rgba(black, 0.1);
+    // color: white;
 }
 
 .lv-topbar .active.has-dropdown:hover > .top-parent-anchor .text {

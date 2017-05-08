@@ -12,8 +12,10 @@
 //--------------------------------------------------------------------
 
 html {
-  @include media-breakpoint-up(xs) { font-size: $font-size-xs; }
-  @include media-breakpoint-up(md) { font-size: $font-size-lg; }
+  @include media-breakpoint-up(xs) { font-size: rem-calc(14); }
+  @include media-breakpoint-up(md) { font-size: rem-calc(14); }
+  @include media-breakpoint-up(lg) { font-size: rem-calc(14); }
+  @include media-breakpoint-up(xl) { font-size: rem-calc(16); }
 }
 
 //-----------------------------------------------------------------
@@ -25,6 +27,26 @@ a {
 }
 
 //-----------------------------------------------------------------
+// PARAGRAPHS
+//-----------------------------------------------------------------
+
+p, ul, ol, td {
+    @include media-breakpoint-up(lg) {
+        // font-size: rem-calc(17); //$font-size-lg; //15
+    }
+}
+
+//-----------------------------------------------------------------
+// LEAD
+//-----------------------------------------------------------------
+
+.lead {
+    @include media-breakpoint-down(sm) {
+        font-size: rem-calc(20);
+    }
+}
+
+//-----------------------------------------------------------------
 // SPACER
 //-----------------------------------------------------------------
 
@@ -33,9 +55,45 @@ a {
 	height: 1px;
 }
 
-//-----------------------------------------------------------------
-//
-//-----------------------------------------------------------------
 //=========================================
 //
 //=========================================
+
+.divider {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+//-----------------------------------------------------------------
+// RESPONSIVE HEADINGS
+//-----------------------------------------------------------------
+
+@mixin responsive-headings($tag-name, $font-size, $multiplier) {
+  $selector: "#{$tag-name}, .#{$tag-name}";
+
+  #{$selector} {
+    font-size: $font-size * (1 - (0.4 * $multiplier));
+  }
+
+  @include media-breakpoint-up(xs) {
+    #{$selector} {
+      font-size: $font-size * (1 - (0.2 * $multiplier));
+    }
+  }
+  @include media-breakpoint-up(md) {
+    #{$selector} {
+      font-size: $font-size * (1 - (0.1 * $multiplier));
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    #{$selector} {
+      font-size: $font-size;
+    }
+  }
+}
+
+@include responsive-headings('h1', $font-size-h1, 1);
+@include responsive-headings('h2', $font-size-h2, 1);
+// @include responsive-headings('h3', $font-size-h3, 0.2);
+// @include responsive-headings('h4', $font-size-h4, 0.7);
+// @include responsive-headings('h5', $font-size-h5, 0.6);
+// @include responsive-headings('h6', $font-size-h6, 0.5);

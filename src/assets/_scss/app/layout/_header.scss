@@ -24,6 +24,7 @@ $header-lg-height: 280px !default;
 .headroom--pinned {
     @include media-breakpoint-down(sm) {
         transform: translateY(0%);
+        background: red;
     }
 }
 .headroom--unpinned {
@@ -41,12 +42,16 @@ $header-lg-height: 280px !default;
 }
 
 .headroom--not-top.global-header {
+	@include media-breakpoint-down(sm) {
+	    background: white !important;
+	}
+
 	@include media-breakpoint-up(md) {
 	    background: rgba(white, 0.8);
 	    box-shadow: 0 0 3px 1px rgba(black, 0.2);
 
-	    -webkit-backdrop-filter: blur(8px);
-	    backdrop-filter: blur(8px);
+	    // -webkit-backdrop-filter: blur(8px);
+	    // backdrop-filter: blur(8px);
 
 	    > .container,
 	    > .container-fluid {
@@ -68,7 +73,7 @@ $header-lg-height: 280px !default;
 }
 
 //-----------------------------------------------------------------
-// HEADER
+// GLOBAL HEADER
 //-----------------------------------------------------------------
 
 .global-header {
@@ -105,6 +110,38 @@ $header-lg-height: 280px !default;
 }
 
 //-----------------------------------------------------------------
+// PAGE HEADER
+//-----------------------------------------------------------------
+
+.page-header {
+	margin-bottom: $spacer*3;
+
+    h1 {
+        padding-bottom: rem-calc(10);
+
+        @include media-breakpoint-down(sm) {
+            // font-size: rem-calc(32);
+        }
+    }
+
+    date {
+    	display: block;
+    	font-size: rem-calc(16);
+    	font-weight: bold;
+    	text-transform: uppercase;
+    	color: #c2c2c2;
+    }
+
+    .divider {
+    	content: "";
+        width: rem-calc(460);
+        max-width: 100%;
+        margin: 0 auto $spacer*2 auto;
+        border-bottom: 1px solid #f0f0f0;
+    }
+}
+
+//-----------------------------------------------------------------
 // LOGO
 //-----------------------------------------------------------------
 
@@ -135,7 +172,7 @@ $header-lg-height: 280px !default;
 	margin: auto 0 auto auto;
 
 	@include media-breakpoint-up(md) {
-	    margin: 30px 0 auto auto;
+	    // margin: 30px 0 auto auto;
 	}
 }
 

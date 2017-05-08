@@ -8,18 +8,12 @@
 // VARIABLES
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// FOOTER
+// FOOTER GENERAL
 //-----------------------------------------------------------------
 
 .global-footer {
 	background: #1f3569; //$brand-primary;
 	color: white;
-
-	.stamps {
-		display: flex;
-		justify-content: flex-end;
-		align-items: flex-end;
-	}
 
 	a {
 		color: white;
@@ -31,10 +25,40 @@
 //-----------------------------------------------------------------
 
 .global-footer-top {
-	padding: rem-calc(70 0 40 0);
+	padding: rem-calc(40 0 40 0);
+
+	@include media-breakpoint-up(md) {
+	    padding: rem-calc(70 0 40 0);
+	}
 
 	.offices a {
 		font-size: rem-calc(23);
+	}
+
+	.stamps {
+		display: flex;
+		align-items: flex-end;
+
+		@include media-breakpoint-up(md) {
+		    justify-content: flex-end;
+		}
+
+		a:last-child img {
+			@include media-breakpoint-down(sm) {
+			    position: relative;
+			    left: -20px;
+			}
+		}
+
+		img {
+			@include media-breakpoint-up(md) {
+			    margin: 0 0 0 $spacer;
+			}
+
+			@include media-breakpoint-down(sm) {
+			    width: 80%;
+			}
+		}
 	}
 }
 

@@ -1,8 +1,10 @@
 ---
-layout: child_layout/text_page
-title: "About"
+layout: child_layout/about
+title: About
 permalink: /about/
 hero: /assets/img/content/hero-2.jpg
+breadcrumbs: false
+hide_parent_links: true
 lead: "The traditional methods of business activity, project delivery and personal interaction have gone through a metamorphosis. We understand these developments in the building industry and provide to our clients innovative solutions within a timely delivery."
 ---
 

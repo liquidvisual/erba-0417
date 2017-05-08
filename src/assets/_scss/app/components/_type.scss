@@ -42,6 +42,27 @@ p, ul, ol, td {
 
 .lead {
     @include media-breakpoint-down(sm) {
+        font-size: rem-calc(18);
+    }
+}
+
+//-----------------------------------------------------------------
+// PAGE CONTENT PARAGRAPHS (STYLISTIC CHOICE)
+//-----------------------------------------------------------------
+
+.page-content {
+    p {
+        @include media-breakpoint-up(md) {
+            margin-bottom: $spacer * 1.5;
+        }
+    }
+
+    h3, h4, h5,
+    .h3, .h4, .h5 {
+        color: $body-color;
+    }
+
+    .fa {
         font-size: rem-calc(20);
     }
 }

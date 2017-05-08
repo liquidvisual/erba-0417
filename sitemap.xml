@@ -25,6 +25,9 @@
 <loc>/</loc>
 </url>
 <url>
+<loc>/about/news/</loc>
+</url>
+<url>
 <loc>/about/</loc>
 </url>
 <url>
@@ -35,9 +38,6 @@
 </url>
 <url>
 <loc>/about/news/news-item/</loc>
-</url>
-<url>
-<loc>/about/news/</loc>
 </url>
 <url>
 <loc>/about/our-people/ken-gurcan-erbas/</loc>

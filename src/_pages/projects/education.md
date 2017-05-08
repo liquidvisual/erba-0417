@@ -1,5 +1,5 @@
 ---
-layout: child_layout/text_page
+layout: child_layout/projects__category
 title: Education
 permalink: /projects/education/
 hero: /assets/img/content/hero-6.jpg

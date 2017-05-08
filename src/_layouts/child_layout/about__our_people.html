@@ -1,0 +1,33 @@
+---
+layout: base__page
+---
+
+{% assign parent_links = site.data.sitemap[page.parent_index].children %}
+
+<section class="section">
+	<div class="container">
+
+		<!-- PEOPLE -->
+		<ul class="block-grid-xs-1 block-grid-md-3">
+		    {% for item in (1..9) %}
+		        <li>
+		            <a href="/about/our-people/our-people-item/">
+						<div class="card card-basic mb-4">
+							<div class="card-img-top">
+								<img src="/assets/img/ui/no-face.png" alt="...">
+								<span class="card-bg" style="background-image: url(/assets/img/ui/no-face.png);"></span>
+							</div>
+							<div class="card-block text-left">
+								<h3 class="card-title">Name Goes Here</h3>
+								<h4 class="card-text h6">Position Here</h4>
+							</div>
+						</div>
+					</a>
+		        </li>
+		    {% endfor %}
+		</ul>
+
+	</div>
+</section>
+
+<div class="spacer mb-4"></div>

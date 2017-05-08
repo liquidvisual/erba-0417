@@ -9,6 +9,7 @@ layout: base
 {% assign breadcrumbs = page.breadcrumbs %}
 {% assign post_date = page.date %}
 {% assign page_lead = page.lead %}
+{% assign subtitle = page.subtitle %}
 
 <!-- HERO -->
 <div class="lv-hero-wrapper">
@@ -26,7 +27,7 @@ layout: base
 <!-- PAGE HEADER -->
 <div class="page-header">
 	<div class="container">
-		<div class="row justify-content-center">
+		<div class="row no-gutters justify-content-center">
 			<div class="col-md-9 text-center">
 
 				{% if post_date %}
@@ -35,6 +36,10 @@ layout: base
 
 				<h1>{{ page.title }}</h1>
 				<div class="divider"></div>
+
+				{% if subtitle %}
+					<h2 class="h4 subtitle">{{ subtitle }}</h2>
+				{% endif %}
 
 				{% if page_lead %}
 					<p class="lead">{{ page.lead }}</p>

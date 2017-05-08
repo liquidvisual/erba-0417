@@ -1,5 +1,5 @@
 ---
-layout: child_layout/text_page
+layout: child_layout/projects__category_item
 title: UNSW Student Housing
 permalink: /projects/education/unsw-student-housing/
 hero: /assets/img/content/hero-6.jpg

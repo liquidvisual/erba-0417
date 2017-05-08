@@ -1,0 +1,39 @@
+---
+layout: base__page
+---
+
+{% assign parent_links = site.data.sitemap[page.parent_index].children %}
+
+<section class="section pt-4">
+	<div class="container">
+
+		<!-- WYSIWYG -->
+		<div class="row justify-content-center">
+			<div class="col-md-8 text-center">
+				{{ content }}
+			</div>
+		</div>
+
+		<div class="spacer mb-4"></div>
+
+		<!-- CATEGORIES -->
+		<ul class="block-grid-xs-1 block-grid-md-2 block-grid-lg-3">
+		    {% for item in parent_links %}
+		        <li>
+		            <a href="/projects/education/unsw-student-housing/">
+						<div class="card card-basic mb-4">
+							<div class="card-img-top">
+								<img src="/assets/img/content/projects/project-{{forloop.index}}.jpg" alt="...">
+								<span class="card-bg" style="background-image: url(/assets/img/content/projects/project-{{forloop.index}}.jpg);"></span>
+							</div>
+							<div class="card-block text-left">
+								<h3 class="card-title">Project Goes Here</h3>
+							</div>
+						</div>
+					</a>
+		        </li>
+		    {% endfor %}
+		</ul>
+
+	</div>
+</section>

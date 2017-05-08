@@ -1,0 +1,30 @@
+---
+layout: base__page
+---
+
+{% assign parent_links = site.data.sitemap[page.parent_index].children %}
+
+<section class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 pr-lg-3 pr-xl-4">
+				<img class="mb-3" width="100%" src="http://placehold.it/586x390" alt="...">
+
+				<!-- IMAGES -->
+				<ul class="block-grid-md-2 block-grid-condensed">
+					{% for i in (1..4) %}
+						<li>
+							<img width="100%" src="http://placehold.it/586x390" alt="...">
+						</li>
+					{% endfor %}
+				</ul>
+
+			</div>
+			<div class="col-md-6">
+				{{ content }}
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="spacer mb-xl-4"></div>

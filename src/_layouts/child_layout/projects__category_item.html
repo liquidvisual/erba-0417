@@ -1,0 +1,65 @@
+---
+layout: base__page
+---
+
+{% assign parent_links = site.data.sitemap[page.parent_index].children %}
+
+<!-- PROJECT ITEM -->
+<section class="section py-4">
+	<div class="container">
+
+		<!-- WYSIWYG -->
+		<div class="row justify-content-center">
+			<div class="col-md-8 text-center">
+				{{ content }}
+			</div>
+		</div>
+
+		<div class="spacer mb-4"></div>
+
+		<!-- GALLERY -->
+		<div class="row">
+			<div class="col-md-6">
+				<p><img width="100%" src="/assets/img/content/project-placeholder.jpg" alt="..."></p>
+			</div>
+			<div class="col-md-6">
+				<ul class="block-grid-condensed block-grid-md-2">
+					{% for item in (1..4) %}
+						<li>
+							<img width="100%" src="/assets/img/content/project-placeholder.jpg" alt="...">
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!-- RELATED PROJECTS -->
+<section class="section text-center">
+	<div class="container">
+
+		<h2>Recent Projects</h2>
+		<div class="spacer my-4"></div>
+
+		<!-- CATEGORIES -->
+		<ul class="block-grid-xs-1 block-grid-md-2 block-grid-lg-3">
+		    {% for item in (1..3) %}
+		        <li>
+		            <a href="/projects/education/unsw-student-housing/">
+						<div class="card card-basic mb-4">
+							<div class="card-img-top">
+								<img src="/assets/img/content/projects/project-{{forloop.index}}.jpg" alt="...">
+								<span class="card-bg" style="background-image: url(/assets/img/content/projects/project-{{forloop.index}}.jpg);"></span>
+							</div>
+							<div class="card-block text-left">
+								<h3 class="card-title">Project Goes Here</h3>
+							</div>
+						</div>
+					</a>
+		        </li>
+		    {% endfor %}
+		</ul>
+	</div>
+</section>

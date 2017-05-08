@@ -132,6 +132,11 @@ $header-lg-height: 280px !default;
     	color: #c2c2c2;
     }
 
+    .subtitle {
+    	color: $body-color;
+    	text-transform: uppercase;
+    }
+
     .divider {
     	content: "";
         width: rem-calc(460);

@@ -38,8 +38,32 @@
 }
 
 //-----------------------------------------------------------------
-//
+// LIST MASONRY
 //-----------------------------------------------------------------
+
+.list-masonry {
+    column-gap: 10px;
+
+    // MOBILE SCROLLER
+    @include media-breakpoint-down(sm) {
+        white-space: nowrap;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    @include media-breakpoint-up(md) {
+        column-count: 2;
+    }
+
+    img {
+        margin-bottom: 10px;
+
+        @include media-breakpoint-down(sm) {
+            width: 200px;
+        }
+    }
+}
+
 //=========================================
 //
 //=========================================

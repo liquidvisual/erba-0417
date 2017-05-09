@@ -2,26 +2,31 @@
 layout: base__page
 ---
 
-{% assign parent_links = site.data.sitemap[page.parent_index].children %}
-
-<section class="section">
+<section class="section pt-2 pt-md-5">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 pr-lg-3 pr-xl-4">
-				<img class="mb-3" width="100%" src="http://placehold.it/586x390" alt="...">
-
-				<!-- IMAGES -->
-				<ul class="block-grid-md-2 block-grid-condensed">
-					{% for i in (1..4) %}
-						<li>
-							<img width="100%" src="http://placehold.it/586x390" alt="...">
-						</li>
-					{% endfor %}
-				</ul>
-
-			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 push-md-6">
 				{{ content }}
+
+				<div class="spacer mb-4"></div>
+			</div>
+			<div class="col-md-6 pull-md-6 pr-lg-3 pr-xl-4">
+
+				<!-- POPUP GALLERY -->
+				<div class="popup-gallery">
+
+					<!-- FEATURED PIC -->
+					<a title="Title here..." href="http://placehold.it/586x390"><img class="mb-2" width="100%" src="http://placehold.it/586x390" alt="..."></a>
+
+					<!-- IMAGES -->
+					<div class="list-masonry">
+						<a title="Title here..." href="http://placehold.it/280x187"><img width="100%" src="http://placehold.it/280x187" alt="..."></a>
+						<a title="Title here..." href="http://placehold.it/280x187"><img width="100%" src="http://placehold.it/280x187" alt="..."></a>
+						<a title="Title here..." href="http://placehold.it/280x241"><img width="100%" src="http://placehold.it/280x241" alt="..."></a>
+						<a title="Title here..." href="http://placehold.it/280x167"><img width="100%" src="http://placehold.it/280x167" alt="..."></a>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>

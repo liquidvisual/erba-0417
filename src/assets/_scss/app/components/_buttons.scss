@@ -12,16 +12,24 @@
 //--------------------------------------------------------------------
 
 .btn-primary {
+	display: inline-flex;
+	align-items: center;
 	min-width: 124px;
 	padding: rem-calc(8 15);
 	font-size: rem-calc(12);
 	text-transform: uppercase;
 	text-align: left;
+
+	.fa-angle-right {
+		margin-left: auto;
+		font-size: rem-calc(18);
+		line-height: 0;
+	}
 }
 
 .btn-link {
 	color: #385CB4;
-	font-weight: bold;
+	font-weight: 500;
 
 	&:hover {
 		color: darken(#385CB4, 10%);

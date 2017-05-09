@@ -13,7 +13,8 @@
     "tether": "^1.2.0",
     "bootstrap": "v4.0.0-alpha.6",
     "bootstrap-validator": "^0.10.1",
-    "headroom": "https://npmcdn.com/headroom.js@0.8.0/dist/headroom.js"
+    "headroom": "https://npmcdn.com/headroom.js@0.8.0/dist/headroom.js",
+    "isotope": "^3.0.1"
   },
   "devDependencies": {}
 }

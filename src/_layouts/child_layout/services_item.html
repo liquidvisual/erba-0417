@@ -1,0 +1,30 @@
+---
+layout: base__page
+---
+
+{% capture feature_classes %}
+	{% if page.feature_cols == 6 %}
+		col-md-8 col-lg-6
+	{% elsif page.feature_cols == 8 %}
+		col-md-8
+	{% else %}
+		col
+	{% endif %}
+{% endcapture %}
+
+<div class="spacer mt-4 my-md-3"></div>
+
+<!-- FEATURE PANEL -->
+<section class="section has-panel-feature" style="background-image: url(/assets/img/layout/section-bg-3.jpg)">
+	<div class="container">
+	    <div class="row no-gutters">
+	        <div class="{{ feature_classes }}">
+	            <div class="panel-feature">
+	                {{ content }}
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</section>
+
+<div class="spacer mb-5"></div>

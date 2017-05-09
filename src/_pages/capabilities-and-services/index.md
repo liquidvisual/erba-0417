@@ -1,5 +1,5 @@
 ---
-layout: child_layout/capabilities_and_services
+layout: child_layout/services
 title: Capabilities & Services
 permalink: /capabilities-and-services/
 hero: /assets/img/content/hero-4.jpg

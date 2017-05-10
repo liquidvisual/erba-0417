@@ -46,6 +46,11 @@
 			min-height: rem-calc(46);
 		}
 
+		// last minute hack
+		h4 {
+			color: $primary-color;
+		}
+
 		date {
 			display: block;
 			margin-bottom: $spacer;

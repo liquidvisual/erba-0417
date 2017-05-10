@@ -3,36 +3,42 @@ layout: base__page
 ---
 
 {% assign parent_links = site.data.sitemap[page.parent_index].children %}
+{% assign placeholder_image = "/assets/img/content/project-placeholder.jpg" %}
 
 <!-- PROJECT ITEM -->
-<section class="section py-4">
+<section class="section pt-4 pb-0">
 	<div class="container">
 
 		<!-- WYSIWYG -->
 		<div class="row justify-content-center">
-			<div class="col-md-8 text-center">
+			<div class="col-md-9 text-center">
 				{{ content }}
 			</div>
 		</div>
 
-		<div class="spacer mb-4"></div>
+		<div class="spacer mb-5"></div>
 
-		<!-- GALLERY -->
-		<div class="row">
-			<div class="col-md-6">
-				<p><img width="100%" src="/assets/img/content/project-placeholder.jpg" alt="..."></p>
-			</div>
-			<div class="col-md-6">
-				<ul class="block-grid-condensed block-grid-md-2">
-					{% for item in (1..4) %}
-						<li>
-							<img width="100%" src="/assets/img/content/project-placeholder.jpg" alt="...">
-						</li>
-					{% endfor %}
-				</ul>
+		<!-- POPUP GALLERY -->
+		<div class="popup-gallery">
+			<div class="row">
+				<div class="col-md-6">
+
+					<!-- FEATURED PIC -->
+					<p><a title="Title here..." href="{{ placeholder_image }}"><img width="100%" src="{{ placeholder_image }}" alt="..."></a></p>
+
+				</div>
+				<div class="col-md-6">
+
+					<!-- IMAGES -->
+					<div class="list-masonry special-masonry">
+						{% for item in (1..4) %}
+							<a title="Title here {{ forloop.index }}" href="{{ placeholder_image }}"><img width="100%" src="{{ placeholder_image }}" alt="..."></a>
+						{% endfor %}
+					</div>
+
+				</div>
 			</div>
 		</div>
-
 	</div>
 </section>
 

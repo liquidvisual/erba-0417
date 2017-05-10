@@ -11,11 +11,10 @@ $(function() {
     // WINDOW LOAD
     //-----------------------------------------------------------------
 
-    $(window).on('load', function() {
+    $(window).on('load', function(event) {
         $('html').addClass('has-loaded');
-        $('input, textarea').placeholder(); // IE9 Patch
-        // $('[data-masonry]').masonry();
         lightbox();
+        console.log('Page has loaded: '+event);
     });
 
     //-----------------------------------------------------------------
@@ -41,6 +40,8 @@ $(function() {
             }
         });
     }
+
+    lightbox();
 
     //-----------------------------------------------------------------
     // LAUNCH MANAGE ON KEYPRESS

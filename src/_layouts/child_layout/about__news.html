@@ -12,24 +12,25 @@ layout: base__page
 				<li>
 					<a href="{{ item.url }}">
 						<div class="card mb-4">
-							<div class="card-img-top">
-								<img src="http://lorempixel.com/400/300?{{forloop.index}}" alt="...">
-								<span class="card-bg" style="background-image: url(http://lorempixel.com/400/300?{{forloop.index}});"></span>
+							<div class="card-img-top hidden-sm-down">
+								<img src="http://placehold.it/400x300" alt="...">
+								<span class="card-bg" style="background-image: url(http://placehold.it/400x300);"></span>
 							</div>
 							<div class="card-block text-left">
 								<h4 class="card-title">{{ item.title }}</h4>
 								<date>{{ item.date }}</date>
 								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<span href="#" class="btn btn-primary">Read more <i class="fa fa-angle-right"></i></span>
+								<span class="btn btn-primary">Read more <i class="fa fa-angle-right"></i></span>
 							</div>
 						</div>
 					</a>
+					<hr class="divider hidden-md-up" {% if forloop.last %}hidden{% endif %}>
 				</li>
 			{% endfor %}
 		</ul>
 
+		<!-- PAGINATION -->
 		<div class="divider mb-3"></div>
-
 		<p>
 			<a class="btn-link float-left" href="/about/news/"><i class="fa fa-angle-left"></i> PREV</a>
 			<a class="btn-link float-right" href="/about/news/">NEXT <i class="fa fa-angle-right"></i></a>

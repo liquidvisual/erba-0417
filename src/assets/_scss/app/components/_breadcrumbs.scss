@@ -18,6 +18,10 @@
 	text-transform: uppercase;
 	color: #c9ccd4;
 
+	@include media-breakpoint-down(sm) {
+	    padding-left: 0; // last min hack
+	}
+
 	a {
 		color: #9299ab;
 	}

@@ -57,9 +57,10 @@ p, ul, ol, td {
         }
     }
 
-    h3, h4, h5,
-    .h3, .h4, .h5 {
-        // color: $body-color;
+    h4, h5, h6,
+    .h4, .h5, .h6 {
+        color: $body-color;
+        margin-bottom: $spacer;
     }
 
     .fa {

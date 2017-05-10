@@ -1,5 +1,7 @@
 {% comment %}
 <!--
+	GOOGLE MAP
+
     Updated: 15.08.16
     Reference:
         https://developers.google.com/maps/documentation/embed/start
@@ -8,6 +10,7 @@
 
 {% assign address = include.address | default: site.data.settings.offices[0].address %}
 
+<!-- GOOGLE MAP -->
 <div class="lv-google-map">
     <iframe width="100%"
             height="320"

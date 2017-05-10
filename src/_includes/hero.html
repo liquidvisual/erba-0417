@@ -1,16 +1,18 @@
 {% comment %}
+<!--
     LIQUIDVISUAL-HERO
 
-    - Updated: 23.04.17
+    - Updated: 10.05.17
     - Notes:
-        * Multiple items in carousel_slides.yml triggers carousel mode
         * .has-height-preset-1 - used for internal pages to set a height
+-->
 {% endcomment %}
 
 {% assign hero = page.hero | default: '/assets/img/content/hero-1.jpg' %}
-{% assign page_title = page.title %}
+{% assign heading = page.title %}
 {% assign lead = page.lead %}
 
+<!-- HERO WRAPPER -->
 <div class="lv-hero-wrapper">
 
     <!-- HERO -->
@@ -26,7 +28,7 @@
         <div class="row no-gutters">
             <div class="col-md-8 col-xl-7">
                 <div class="panel-feature">
-                    <h1>{{ page_title }}</h1>
+                    <h1>{{ heading }}</h1>
                     <p class="mb-0">{{ lead }}</p>
                 </div>
             </div>

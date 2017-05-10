@@ -9,12 +9,21 @@ feature_cols: 6
 ---
 
 - Automatic Fire Sprinkler Systems
+
 - Dry and Pre-Action Fire Sprinkler Systems
+
 - Fire Safety BCA Compliance Assessments
+
 - Smoke Hazard Management Controls Systems
+
 - Fire Hose Reels Systems
+
 - Fire Hydrants Systems
+
 - Fire Alarm and Detection Systems
+
 - Fire Extinguishers
+
 - Life Cycle Cost Analysis
+
 - Wall-wetting Drenchers

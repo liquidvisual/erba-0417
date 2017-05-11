@@ -19,7 +19,7 @@
     <div class="lv-hero">
 
         <!-- HERO ITEMS -->
-        {% for item in slides | limit: 1 %}
+        {% for item in slides %}
             <div class="lv-hero-item" style="background-image: url('{{ item.image }}')"></div>
         {% endfor %}
 

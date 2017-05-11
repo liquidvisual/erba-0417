@@ -45,8 +45,8 @@ b, strong {
 //-----------------------------------------------------------------
 
 .lead {
-    @include media-breakpoint-down(sm) {
-        font-size: rem-calc(18);
+    @include media-breakpoint-down(lg) {
+        font-size: 22px; //rem-calc(22);
     }
 }
 

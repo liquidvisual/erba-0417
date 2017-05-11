@@ -51,7 +51,7 @@
 
 .lv-topbar a {
     display: block; // [LOCKED]
-    padding: rem-calc(10 15);
+    padding: rem-calc(15);
     color: $brand-primary; //$body-color;
 }
 
@@ -139,10 +139,10 @@
     position: absolute;
     top: auto;
     left: 0;
-    width: rem-calc(240);
+    width: rem-calc(304);
     height: 0; // so hit areas aren't triggered
     overflow: hidden; // so hit areas aren't triggered
-    background: white;
+    background: rgba(239, 239, 239, 0.83);
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     opacity: 0;
     visibility: hidden;
@@ -179,8 +179,8 @@
 
 .lv-topbar .dropdown li a {
     transition: none; // UX decision
-    font-size: rem-calc(13); // opinionated
-    color: $body-color;
+    font-size: rem-calc(15); // opinionated
+    color: $primary-color;
     // padding: rem-calc(15 15);
 }
 //=========================================
@@ -188,7 +188,7 @@
 //=========================================
 
 .lv-topbar .dropdown a {
-    border-bottom: 1px solid rgba(black, 0.1);
+    border-bottom: 1px solid rgba(black, 0.03);
 }
 
 .lv-topbar .dropdown li:last-child a {

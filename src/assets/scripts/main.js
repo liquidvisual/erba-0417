@@ -8,16 +8,15 @@
 $(window).on('load', function(event) {
     $('html').addClass('has-loaded');
     lightbox();
-    console.log('Page has loaded inside: '+event);
 });
 
 //-----------------------------------------------------------------
 // DOCUMENT READY
 //-----------------------------------------------------------------
 
-$(function() {
+// $(function() {
 
-});
+// });
 
 //-----------------------------------------------------------------
 // POPUP GALLERY

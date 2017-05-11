@@ -8,9 +8,9 @@
 -->
 {% endcomment %}
 
-{% assign hero = page.hero | default: '/assets/img/content/hero-1.jpg' %}
 {% assign heading = page.title %}
 {% assign lead = page.lead %}
+{% assign slides = site.data.carousel_slides %}
 
 <!-- HERO WRAPPER -->
 <div class="lv-hero-wrapper">
@@ -18,21 +18,44 @@
     <!-- HERO -->
     <div class="lv-hero">
 
-        <!-- HERO ITEM -->
-        <div class="lv-hero-item" style="background-image: url('{{ hero }}')"></div>
+        <!-- HERO ITEMS -->
+        {% for item in slides | limit: 1 %}
+            <div class="lv-hero-item" style="background-image: url('{{ item.image }}')"></div>
+        {% endfor %}
 
     </div> <!-- /.lv-hero -->
 
     <!-- PANEL FEATURE -->
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="col-md-8 col-xl-7">
-                <div class="panel-feature">
-                    <h1>{{ heading }}</h1>
-                    <p class="mb-0">{{ lead }}</p>
+    <div class="lv-hero-caption">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-8 col-xl-7">
+                    <div class="panel-feature">
+                        <h1>{{ heading }}</h1>
+                        <p class="mb-0">{{ lead }}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    {% comment %}
+    <!-- CAROUSEL CONTROLS -->
+    <div class="lv-hero-carousel-controls">
+        <div class="container">
+            <span href="#" class="lv-hero-carousel-prev-btn"><i class="fa fa-angle-left"></i></span>
+            <span href="#" class="lv-hero-carousel-next-btn"><i class="fa fa-angle-right"></i></span>
+        </div>
+    </div>
+
+    <!-- CAROUSEL BULLETS -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="lv-hero-carousel-bullets"></div>
+            </div>
+        </div>
+    </div>
+    {% endcomment %}
 
 </div> <!-- /.lv-hero-wrapper -->

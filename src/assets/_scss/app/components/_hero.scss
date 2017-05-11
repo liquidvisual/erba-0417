@@ -1,7 +1,7 @@
 /*
     HERO.CSS
 
-    - Updated: 26.03.17
+    - Updated: 11.03.17
     - Notes:
         * liquidvisual recommends bxSlider for hero carousels
         * fixed overflow problem when removing JS
@@ -42,21 +42,19 @@ $hero-lg-height-preset-1:   rem-calc(434);
 
 .lv-hero {
     // width: 100%; // added last minute - breaking?
-    // overflow: hidden; // causes problems without JS
+    overflow: hidden; // causes problems without JS
     height: $hero-sm-height;
-
-
 
     @include media-breakpoint-up(md) {
         height: $hero-md-height;
     }
 
     @include media-breakpoint-up(lg) {
-       height: $hero-lg-height;
+        height: $hero-lg-height;
     }
 
     @include media-breakpoint-up(xl) {
-       height: $hero-xl-height;
+        height: $hero-xl-height;
     }
 
     //=========================================
@@ -67,11 +65,11 @@ $hero-lg-height-preset-1:   rem-calc(434);
         height: $hero-sm-height-preset-1;
 
         @include media-breakpoint-up(md) { // added - refactor
-           height: $hero-md-height-preset-1;
+            height: $hero-md-height-preset-1;
         }
 
         @include media-breakpoint-up(lg) {
-           height: $hero-lg-height-preset-1;
+            height: $hero-lg-height-preset-1;
         }
     }
 }
@@ -98,20 +96,64 @@ $hero-lg-height-preset-1:   rem-calc(434);
 // HERO CAPTION
 //-----------------------------------------------------------------
 
-// .lv-hero-item-caption {
-//     // position: relative;
-//     // top: rem-calc(50);
-//     padding: rem-calc(164 60 30 60);
-//     background: rgba($brand-secondary, 0.93) url(/assets/img/content/logo-mark.svg) no-repeat -60px -60px;
-//     color: white;
-//     font-size: rem-calc(19);
+.lv-hero-caption {
+    position: relative;
+    z-index: 100;
+}
 
+//-----------------------------------------------------------------
+// CAROUSEL CONTROLS
+//-----------------------------------------------------------------
 
+.lv-hero-carousel-controls {
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    height: 0;
+    z-index: 100;
 
-//     h1 {
-//         font-weight: 300;
-//     }
-// }
+    > .container {
+        position: relative;
+    }
+
+    //=========================================
+    // NEXT / PREV BUTTONS
+    //=========================================
+
+    .lv-hero-carousel-prev-btn,
+    .lv-hero-carousel-next-btn {
+        position: absolute;
+        width: rem-calc(50);
+        height: rem-calc(50);
+        line-height: rem-calc(50);
+        cursor: pointer;
+        text-align: center;
+        font-family: "FontAwesome";
+        font-size: rem-calc(50);
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
+    }
+
+    .lv-hero-carousel-prev-btn {
+        left: $container-gutter/2;
+    }
+
+    .lv-hero-carousel-next-btn {
+        right: $container-gutter/2;
+    }
+}
 
 //-----------------------------------------------------------------
 //

@@ -35,7 +35,7 @@
             responsive: true,
             touchEnabled: true,
             speed: 1200,
-            pause: 8000,
+            pause: 6000,
             slideMargin: 0,
             slideSelector: ".lv-hero-item",
             minSlides: 1,

@@ -24,7 +24,6 @@ $header-lg-height: 280px !default;
 .headroom--pinned {
     @include media-breakpoint-down(sm) {
         transform: translateY(0%);
-        background: red;
     }
 }
 .headroom--unpinned {

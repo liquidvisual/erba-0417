@@ -11,6 +11,38 @@
 $spacer: rem-calc(20) !default;
 
 //-----------------------------------------------------------------
+// TABLES
+//-----------------------------------------------------------------
+
+.page-content table {
+	@extend .table;
+	@extend .table-sm;
+	// margin-bottom: $spacer * 3;
+
+	@include media-breakpoint-up(md) {
+	    // table-layout: fixed;
+	}
+
+	// OMITTED DUE TO TYPE OF TABLE
+	// @include media-breakpoint-down(sm) {
+	// 	display: block;
+	// 	width: 100%;
+	// 	overflow-x: auto;
+	// 	-ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+	// 	table-layout: fixed;
+	// }
+
+	th, td {
+		padding-left: 0;
+		// padding-right: 0;
+	}
+
+	th {
+		font-weight: 600;
+	}
+}
+
+//-----------------------------------------------------------------
 // IMAGE ALIGNMENT
 //-----------------------------------------------------------------
 

@@ -15,7 +15,11 @@
     column-gap: none;
 
     img {
-        padding: 0 11px 9px 0;
+        // padding: 0 11px 9px 0;
+
+        @include media-breakpoint-up(md) {
+            padding: 0 0 9px 11px;
+        }
     }
 }
 

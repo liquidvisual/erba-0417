@@ -46,9 +46,11 @@
 
     // MOBILE SCROLLER
     @include media-breakpoint-down(sm) {
-        white-space: nowrap;
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
+        // white-space: nowrap;
+        // overflow-x: scroll;
+        // -webkit-overflow-scrolling: touch;
+
+        column-count: 2;
     }
 
     @include media-breakpoint-up(md) {
@@ -59,7 +61,7 @@
         margin-bottom: 10px;
 
         @include media-breakpoint-down(sm) {
-            width: 200px;
+            // width: 200px;
         }
     }
 }

@@ -1,12 +1,23 @@
 {% assign settings = site.data.settings %}
-{% assign logo = "/assets/img/content/logo@2x.png" %}
+{% assign logo_1 = "/assets/img/content/logo@2x.png" %}
+{% assign logo_2 = "/assets/img/content/logo--sustain.svg" %}
 
 <div class="container-fluid">
 
-    <!-- LOGO -->
-    <a class="logo" href="/" title="{{ settings.title_homepage }}" itemprop="url">
-        <img src="{{ logo }}" alt="{{ settings.company }}" itemprop="logo">
-    </a>
+    <!-- LOGOS -->
+    <div class="logos">
+
+        <!-- LOGO DEFAULT -->
+        <a class="logo is-default" href="/" title="{{ settings.title_homepage }}" itemprop="url">
+            <img src="{{ logo_1 }}" alt="{{ settings.company }}" itemprop="logo">
+        </a>
+
+        <!-- LOGO SUSTAIN -->
+        <a class="logo is-sustain" href="/" title="Erbas Sustain" itemprop="url">
+            <img src="{{ logo_2 }}" alt="Erbas Sustain" itemprop="logo">
+        </a>
+
+    </div>
 
     <!-- HAMBURGER -->
     <div class="global-header-hamburger hidden-xl-up">
@@ -19,8 +30,13 @@
     </div>
 
     <!-- NAVIGATION -->
-    <nav class="lv-topbar hidden-lg-down">
+    <nav class="lv-topbar is-default hidden-lg-down">
         {% include snippets/navigation.html %}
+    </nav>
+
+    <!-- SUSTAIN NAVIGATION ** FOR DEMO PURPOSES ONLY ** -->
+    <nav class="lv-topbar is-sustain hidden-lg-down">
+        {% include snippets/navigation.html data=site.data.sitemap_sustain %}
     </nav>
 
 </div>

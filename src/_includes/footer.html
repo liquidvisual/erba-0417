@@ -1,6 +1,7 @@
 {% assign settings = site.data.settings %}
 {% assign offices = settings.offices %}
-{% assign logo = "/assets/img/content/logo-inverse@2x.png" %}
+{% assign logo_1 = "/assets/img/content/logo-inverse@2x.png" %}
+{% assign logo_2 = "/assets/img/content/logo--sustain-white.svg" %}
 
 <!-- FOOTER TOP -->
 <section class="global-footer-top">
@@ -12,8 +13,15 @@
 
                         <!-- LOGO -->
                         <p class="mb-4">
-                            <a class="logo" href="/" title="{{ settings.title_homepage }}" itemprop="url">
-                                <img width="144" src="{{ logo }}" alt="{{ settings.company }}" itemprop="logo">
+
+                            <!-- LOGO DEFAULT -->
+                            <a class="logo is-default" href="/" title="{{ settings.title_homepage }}" itemprop="url">
+                                <img width="144" src="{{ logo_1 }}" alt="{{ settings.company }}" itemprop="logo">
+                            </a>
+
+                            <!-- LOGO SUSTAIN -->
+                            <a class="logo is-sustain" href="/" title="Erbas Sustain" itemprop="url">
+                                <img width="144" src="{{ logo_2 }}" alt="Erbas Sustain" itemprop="logo">
                             </a>
                         </p>
 

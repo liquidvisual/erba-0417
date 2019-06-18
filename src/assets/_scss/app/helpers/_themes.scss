@@ -12,12 +12,142 @@
 //-----------------------------------------------------------------
 
 .theme-home .global-header {
-	background: rgba(white, 0.44);
+	// background: rgba(white, 0.44);
 
 	&.headroom--not-top {
 		@include media-breakpoint-up(md) {
-		    background: rgba(white, 0.8);
+		    // background: rgba(white, 0.8);
 		}
+	}
+}
+
+//-----------------------------------------------------------------
+// THEME SUSTAIN
+//-----------------------------------------------------------------
+
+.theme-sustain {
+
+	//=========================================
+	// HEADER
+	//=========================================
+
+	.global-header .logos {
+		&:hover .logo img {
+			opacity: 0.3; // unselect all
+		}
+	}
+
+	.global-header .logo.is-default img {
+		opacity: 0.2;
+	}
+
+	.global-header .logo.is-sustain img {
+		opacity: 1;
+	}
+
+	//=========================================
+	// TOPBAR
+	//=========================================
+
+	.lv-topbar a,
+	.lv-topbar .dropdown a {
+		color: $brand-sustain;
+	}
+
+	.lv-topbar .active .top-parent-anchor .text {
+		border-color: $brand-sustain;
+	}
+
+	.lv-topbar {
+		&.is-default { display: none; }
+	    &.is-sustain { display: block; }
+	}
+
+	//=========================================
+	// HERO
+	//=========================================
+
+	.lv-hero-caption .panel-feature h1 {
+		font-size: rem-calc(33);
+	}
+
+	//=========================================
+	// PANEL FEATURE
+	//=========================================
+
+	.panel-feature {
+		background: rgba($brand-sustain, 0.93) url(/assets/img/content/logo-mark-sustain.png) no-repeat;
+		background-position: left -45px top -110px;
+	}
+
+	//=========================================
+	// HEADINGS + LINKS + BTN LINKS
+	//=========================================
+
+	h1, h2, h3, h4, h5, h6,
+	h4.card-title,
+	.btn-link,
+	.section > .container > h2 {
+		color: $brand-sustain;
+
+		&:hover {
+			color: darken($brand-sustain, 5%);
+		}
+	}
+
+	//=========================================
+	// PRIMARY BUTTONS
+	//=========================================
+
+	.btn.btn-primary {
+		border-color: $brand-sustain;
+		background-color: $brand-sustain;
+
+		&:hover {
+			border-color: darken($brand-sustain, 5%);
+			background-color: darken($brand-sustain, 5%);
+		}
+	}
+
+	//=========================================
+	// INPUT BUTTONS (FOOTER SEARCH)
+	//=========================================
+
+	.input-group-btn .btn-secondary {
+		background-color: darken($brand-sustain, 10%);
+	}
+
+	.btn.btn-outline-secondary:hover {
+		color: $brand-sustain;
+	}
+
+	//=========================================
+	// FOOTER
+	//=========================================
+
+	.global-footer {
+		background: saturate(darken($brand-sustain, 10%), 5%);
+	}
+
+	.global-footer .logo.is-default { display: none; }
+	.global-footer .logo.is-sustain { display: block; }
+
+	//=========================================
+	// DOCUMENT LINK (FROM JONO INLINE)
+	//=========================================
+
+	.document-link a,
+	a .document-link,
+	.form-link a,
+	a .form-link {
+	    background: $brand-sustain;
+	}
+
+	.document-link a:hover,
+	a:hover .document-link,
+	.form-link a:hover,
+	a:hover .form-link {
+	    background: darken($brand-sustain, 5%);
 	}
 }
 

@@ -23,6 +23,58 @@
     }
 }
 
+//-----------------------------------------------------------------
+// Jono's inline styles - 2019
+//-----------------------------------------------------------------
+
+.document-link a,
+a .document-link,
+.form-link a,
+a .form-link {
+    clear: both;
+    background: #f57d2b;
+    padding: 14px 37px 14px 37px;
+    display: block;
+    position: relative;
+    font-weight: 500;
+    max-width: 750px;
+    color: #fff;
+}
+
+.document-link a:before,
+a .document-link:before,
+.form-link a:before,
+a .form-link:before {
+    content: "\f15b";
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 17px;
+    left: 14px;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.form-link a:before, a .form-link:before {
+    content: "\f14c";
+}
+
+.document-link a:after,
+a .document-link:after,
+.form-link a:after,
+a .form-link:after {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 17px;
+    right: 14px;
+    font-size: 1.1rem;
+    line-height: 1rem;
+}
+
+.document-link a:hover, a:hover .document-link, .form-link a:hover, a:hover .form-link {
+    background: #fd954f;
+}
+
 //=========================================
 //
 //=========================================

@@ -1,0 +1,44 @@
+- title: Home
+  url: /
+
+- title: About
+  url: /about/
+  include_children_in_nav: true
+  children:
+    - title: Our People
+      url: /about/our-people/
+      include_children_in_nav: true
+      children:
+        - title: Ken Gurcan Erbas
+          url: /about/our-people/ken-gurcan-erbas/
+
+    - title: News
+      url: /about/news/
+      include_children_in_nav: true
+      children:
+        - title: News Item
+          url: /about/news/news-item/
+
+- title: Capability
+  url: /capabilities-and-services/
+  include_children_in_nav: true
+  children:
+    - title: Subpage
+      url: /capabilities-and-services/electrical/
+    - title: Subpage
+      url: /capabilities-and-services/electrical/
+    - title: Subpage
+      url: /capabilities-and-services/building-information-modelling/
+
+- title: Projects
+  url: /projects/
+  include_children_in_nav: false
+  children:
+    - title: Subpage
+      url: /projects/education/
+
+- title: Building Services Engineering
+  url:
+
+- title: Contact
+  url: /contact/

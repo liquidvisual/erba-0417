@@ -80,6 +80,13 @@ html[data-dev-mode] .lv-page-loader {
     animation: loader-bounce 2.0s infinite ease-in-out;
 }
 
+.theme-sustain {
+    .double-bounce-1,
+    .double-bounce-2 {
+        background-color: $brand-sustain; //white;
+    }
+}
+
 .double-bounce-2 {
     animation-delay: -1.0s;
 }

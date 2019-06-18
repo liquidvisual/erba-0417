@@ -14,7 +14,12 @@
 .lv-topbar {
     margin: auto -15px 14px auto;
     // margin-top: 30px;
-    transition: margin 300ms ease;
+    // transition: margin 300ms ease;
+    transition: transform 200ms ease;
+
+    &.is-sustain {
+        display: none;
+    }
 }
 
 //-----------------------------------------------------------------

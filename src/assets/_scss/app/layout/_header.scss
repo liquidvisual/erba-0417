@@ -58,7 +58,8 @@ $header-lg-height: 280px !default;
 	    }
 
 	    .lv-topbar {
-	        margin: auto -15px auto auto;
+	        // margin: auto -15px auto auto;
+	        transform: translateY(-10px);
 	    }
 
 	    .logo {
@@ -68,6 +69,14 @@ $header-lg-height: 280px !default;
 	    		width: 150px;
 	    	}
 	    }
+	}
+
+	// logo divider
+	.logo.is-default:after {
+		@include media-breakpoint-up(xl) {
+			top: -4px;
+		    height: 60px;
+		}
 	}
 }
 
@@ -80,7 +89,7 @@ $header-lg-height: 280px !default;
 	top: 0;
 	width: 100%;
 	z-index: 999;
-	background: rgba(white, 0.64);
+	background: rgba(white, 0.85); // 0.64
 
 	@include media-breakpoint-down(sm) {
 		// position: fixed;
@@ -146,14 +155,18 @@ $header-lg-height: 280px !default;
 }
 
 //-----------------------------------------------------------------
-// LOGO
+// LOGOS
 //-----------------------------------------------------------------
 
-.global-header .logo {
-	@include media-breakpoint-up(md) {
-	    // margin: 30px 0 0 0;
-	}
+.global-header .logos {
+	display: flex;
 
+	&:hover .logo img {
+		opacity: 0.3; // unselect all
+	}
+}
+
+.global-header .logo {
 	img {
 		width: 95px;
 		transition: all 300ms ease;
@@ -163,9 +176,44 @@ $header-lg-height: 280px !default;
 		}
 
 		@include media-breakpoint-up(xl) {
-			width: 200px;
+			// width: 200px;
+		}
+
+		&:hover {
+			opacity: 1 !important;
 		}
 	}
+}
+
+.global-header .logo.is-default {
+	position: relative;
+	margin-right: rem-calc(40);
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: -4px;
+		right: -17px;
+		width: 1px;
+		height: 40px;
+		background: #a8aaac;
+		pointer-events: none;
+
+		@include media-breakpoint-up(md) {
+			top: -4px;
+		    height: 60px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			top: -13px;
+		    height: 78px;
+		}
+	}
+}
+
+// default state
+.global-header .logo.is-sustain img {
+	opacity: 0.3;
 }
 
 //-----------------------------------------------------------------

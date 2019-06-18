@@ -23,7 +23,7 @@
     "grunt-jekyll": "~0.4.2",
     "grunt-postcss": "^0.8.0",
     "grunt-prettify": "^0.4.0",
-    "grunt-sass": "^1.0.0",
+    "grunt-sass": "^2.1.0",
     "grunt-sass-globbing": "^1.4.0",
     "grunt-shell": "^1.2.1",
     "grunt-svgmin": "~0.4.0",
